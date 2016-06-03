@@ -29,3 +29,17 @@ To transfer 1 GB from HDD to Memory: 6.7s + 15ms (Seek Time + Rotation Latency) 
 To transfer 1 MB from SSD to Memory: 2.5ms
 
 To transfer 1 GB from SSD to Memory: 2.5s
+
+## Spindles
+Spindle is measure of IO Throughput for HDD. 
+
+1 IOPS = 1 / (rotational latency + seek time)
+
+Random small reads: 1s = 50 Random Reads (seeks) = 50 IOPS @ 7200RPM HDD
+
+Random large reads: 1MB Random Read = 22ms + 1MB / 150 MB/s = 30ms -> 30 MB/s
+
+
+1 Spindle = 50 IOPS (small reads)
+
+1 Spindle = 30 MB/s @ 1MB reads
